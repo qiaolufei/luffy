@@ -9,7 +9,11 @@ import $ from 'jquery'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import qs from 'qs'
+import VueParticles from 'vue-particles'
+import htmlToPdf from '@/utils/htmlToPdf'
 
+Vue.use(htmlToPdf)
+Vue.use(VueParticles)
 Vue.use(elementUI)
 Vue.use(VueAxios, axios) // 可全局调用 this.axios.post()
 Vue.prototype.$qs = qs // 可全局调用 this.$qs

@@ -1,5 +1,5 @@
 {
-  "name": "my_vue_demo",
+  "name": "luffy",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "luffy <1243312228@qq.com>",
@@ -16,7 +16,9 @@
   "dependencies": {
     "axios": "^0.19.0",
     "element-ui": "^2.12.0",
+    "html2canvas": "^1.0.0-rc.5",
     "jquery": "^3.4.1",
+    "jspdf": "^1.5.3",
     "qs": "^6.8.0",
     "vue": "^2.5.2",
     "vue-axios": "^2.1.4",
@@ -76,6 +78,7 @@
     "url-loader": "^0.5.8",
     "vue-jest": "^1.0.2",
     "vue-loader": "^13.3.0",
+    "vue-particles": "^1.0.9",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
