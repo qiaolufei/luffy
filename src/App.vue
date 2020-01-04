@@ -25,7 +25,23 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods: {
+    getHeight () {
+      // 根据页面元素的总高度来设置背景的高度
+      let height = document.documentElement.scrollHeight + 'px'
+      $('.particle').css('height', height)
+    }
+  },
+  mounted () {
+    this.getHeight()
+  },
+  watch: {
+    '$route' (to, from) { // 监听路由是否变化
+      this.getHeight()
+      location.reload()
+    }
+  }
 }
 </script>
 
@@ -33,7 +49,6 @@ export default {
 .particle{
       position: absolute;
       width: 100%;
-      height: 300%;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 50% 50%;

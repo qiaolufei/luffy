@@ -5,9 +5,11 @@ import blog from '@/pages/blog'
 import schedule from '@/pages/schedule'
 import aboutme from '@/pages/about_me'
 import message from '@/pages/message'
+import blogInfo from '@/pages/blogInfo'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -33,6 +35,11 @@ export default new Router({
       path: '/message',
       name: 'message',
       component: message
+    },
+    {
+      path: '/blogInfo',
+      name: 'blogInfo',
+      component: blogInfo
     }
   ]
 })

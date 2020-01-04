@@ -36,10 +36,12 @@
             </div>
           </div>
         </div>
+        <footpage></footpage>
     </div>
 </template>
 <script>
 import headpage from '@/components/header'
+import footpage from '@/components/footer'
 export default {
   data () {
     return {
@@ -47,14 +49,15 @@ export default {
       msg: '',
       grade: 0,
       list: [
-        {name: '乔路非', msg: '很不错的博客', grade: 3, time: '2019-01-03 10:17'},
-        {name: '乔路非', msg: '很不错的博客', grade: 3, time: '2019-01-03 10:17'},
-        {name: '乔路非', msg: '很不错的博客', grade: 3, time: '2019-01-03 10:17'}
+        {name: '店小二', msg: '很不错的博客', grade: 5, time: '2020-01-03 10:17'},
+        {name: 'Jay', msg: '哎呦，不错哦', grade: 4, time: '2019-10-04 12:20'},
+        {name: '小了了', msg: '写的很不错，有时间交流学习一下', grade: 4, time: '2019-09-20 10:17'}
       ]
     }
   },
   components: {
-    headpage
+    headpage,
+    footpage
   },
   methods: {
     getTime () {

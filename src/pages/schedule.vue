@@ -21,10 +21,12 @@
               </div>
             </div>
         </div>
+        <footpage></footpage>
     </div>
 </template>
 <script>
 import headpage from '@/components/header'
+import footpage from '@/components/footer'
 export default {
   data () {
     return {
@@ -38,7 +40,8 @@ export default {
     }
   },
   components: {
-    headpage
+    headpage,
+    footpage
   },
   methods: {
     getTime () {
