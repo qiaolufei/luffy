@@ -10,7 +10,7 @@
           </el-carousel>
           <h2>最新博客</h2>
           <div class="index-list__blog">
-            <el-link class="index-list__blog-title" href='/blogInfo?id=3'>{{this.blog.title}}</el-link>
+            <el-link class="index-list__blog-title" @click="to()">{{this.blog.title}}</el-link>
               <i class="el-icon-date" style="margin-left:5%"></i><span>{{this.blog.time}}</span>
               <el-divider content-position="right">乔路非</el-divider>
               <span v-for="tag in this.blog.tags" :key="tag" class="index-list__blog-tag">{{tag}}</span>
@@ -106,6 +106,9 @@ export default {
     footpage
   },
   methods: {
+    to () {
+      this.$router.push({path: '/blogInfo?id=3'})
+    }
   }
 }
 </script>

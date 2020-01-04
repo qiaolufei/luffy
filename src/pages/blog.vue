@@ -4,7 +4,7 @@
         <div class="blog">
           <div class="blog__list">
             <div v-for="(item1, index1) in blogs" :key="index1" class="blog__list-one">
-              <el-link class="blog__list-one__title" :href="'/blogInfo?id=' +index1">{{item1.title}}</el-link>
+              <el-link class="blog__list-one__title" @click="to(index1)">{{item1.title}}</el-link>
               <i class="el-icon-date" style="margin-left:5%"></i><span>{{item1.time}}</span>
               <el-divider content-position="right">乔路非</el-divider>
               <span v-for="tag in item1.tags" :key="tag" class="blog__list-one__tag">{{tag}}</span>
@@ -55,6 +55,9 @@ export default {
     footpage
   },
   methods: {
+    to (index1) {
+      this.$router.push({path: '/blogInfo?id=' + index1})
+    }
   }
 }
 </script>
